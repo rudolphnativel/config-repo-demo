@@ -13,7 +13,8 @@ spring:
       ddl-auto: create-drop
 #swagger2
   mvc:
-    message_infraction: ant_path_matcher
+    pathmatch:
+      matching-strategy: ant_path_matcher
 #    profiles:
 #      active: usage_message
 #Eureka
