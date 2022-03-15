@@ -1,0 +1,23 @@
+#mariadb
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:6666/message_infraction?createDatabaseIfNotExist=true
+    username: root
+    password: admin
+    driver-clas-name: org.mariadb.jdbc.Driver
+  jpa:
+    show-sql: true
+    datasource-plateform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+#Eureka
+eureke:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9102/eureka/
+#swagger2
+mvc:
+  message_infraction: ant_path_matcher
+  profiles:
+    active: usage_message
