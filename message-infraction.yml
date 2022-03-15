@@ -15,7 +15,7 @@ spring:
 eureke:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9102/eureka/
+      defaultZone: http://localhost:8761/eureka/
 #swagger2
 mvc:
   message_infraction: ant_path_matcher
