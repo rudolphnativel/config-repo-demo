@@ -10,6 +10,8 @@ server:
 spring:
   application:
     name: eureka-server
+  main:
+    allow-bean-definition-overriding: true
 logging:
   level:
     com:
