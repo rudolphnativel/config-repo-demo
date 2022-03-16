@@ -1,11 +1,18 @@
-server:
-  port: 9000
+
 eureke:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    register-with-eureka: false
+    fetch-registry: false
     serviceUrl:
       defaultZone: http://localhost:9000/eureka/
+server:
+  port: 9000
 spring:
   application:
     name: eureka-server
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
