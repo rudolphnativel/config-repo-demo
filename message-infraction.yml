@@ -19,6 +19,47 @@ spring:
 #      active: usage_message
 #Eureka
 eureka:
+  instance:
+    appname: message-infraction  # ==> This is a instance of ABC-SERVICE
   client:
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:9000/eureka/
+server:
+  port: 8000
+---
+spring:
+  profiles: message-inraction-replica01
+eureka:
+  instance:
+    appname: message-infraction  # ==> This is a instance of ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka
+server:
+  port: 8001
+---
+spring:
+  profiles: message-inraction-replica02
+eureka:
+  instance:
+    appname: message-infraction  # ==> This is a instance of ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka
+server:
+  port: 8002
+---
+spring:
+  profiles: message-inraction-replica03
+eureka:
+  instance:
+    appname: message-infraction  # ==> This is a instance of ABC-SERVICE
+  client:
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka
+server:
+  port: 8001
